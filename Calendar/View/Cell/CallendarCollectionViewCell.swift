@@ -33,6 +33,20 @@ class CallendarCollectionViewCell: UICollectionViewCell {
         
     }()
     
+    override var isSelected: Bool {
+        didSet {
+            if self.isSelected {
+                backgroundColor = .orange
+                dayLabel.textColor = .white
+                dayNumberLabel.textColor = .white
+            } else {
+                backgroundColor = .red
+                dayLabel.textColor = .orange
+                dayNumberLabel.textColor = .white
+            }
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -48,6 +62,12 @@ class CallendarCollectionViewCell: UICollectionViewCell {
         backgroundColor = .red
         addSubview(dayLabel)
         addSubview(dayNumberLabel)
+    }
+    
+    public func configure(_ model: DateModel) {
+        
+        dayLabel.text = model.dayOfWeek
+        dayNumberLabel.text = model.numberOfDay
     }
 }
 

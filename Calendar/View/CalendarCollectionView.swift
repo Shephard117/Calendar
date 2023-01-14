@@ -7,9 +7,19 @@
 
 import UIKit
 
-class CallendarCollectonView: UICollectionView {
+protocol CalendarProtocol: AnyObject {
+    
+    func maxOffsetLeft()
+    func maxOffsetRight()
+    
+}
+
+class CalendarCollectonView: UICollectionView {
     
     private let collectionLayout = UICollectionViewFlowLayout()
+    weak var calendarDelegate: CalendarProtocol?
+    
+    private var daysArray = [DateModel]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: collectionLayout)
@@ -45,10 +55,26 @@ class CallendarCollectonView: UICollectionView {
         dataSource = self
         
     }
+    
+    public func setDaysArray(_ array: [DateModel]) {
+        
+        daysArray = array
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView.contentOffset.x < 3 {
+            calendarDelegate?.maxOffsetLeft()
+        }
+        
+        if scrollView.contentOffset.x > self.frame.width * 2 {
+            calendarDelegate?.maxOffsetRight()
+        }
+    }
 }
 
 //MARK: - Delegate Methods
-extension CallendarCollectonView: UICollectionViewDelegate {
+extension CalendarCollectonView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("tapped cell")
@@ -57,11 +83,11 @@ extension CallendarCollectonView: UICollectionViewDelegate {
 }
 
 //MARK: - Data Source Methods
-extension CallendarCollectonView: UICollectionViewDataSource {
+extension CalendarCollectonView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 7
+        return daysArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,12 +96,17 @@ extension CallendarCollectonView: UICollectionViewDataSource {
             return UICollectionViewCell()
             
         }
+        if daysArray[indexPath.row].dateString == Date().dateFormatddMMyyyy() {
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
+        }
+        let dateModel = daysArray[indexPath.row]
+        cell.configure(dateModel)
         return cell
     }
 }
 
 //MARK: - FlowLayotDelegate Methods
-extension CallendarCollectonView: UICollectionViewDelegateFlowLayout {
+extension CalendarCollectonView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: collectionView.frame.width / 7.5, height: collectionView.frame.height)

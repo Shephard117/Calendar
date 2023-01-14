@@ -8,7 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		ED5F692C296FD8340019E12E /* CallendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F692B296FD8340019E12E /* CallendarCollectionViewCell.swift */; };
-		ED5F692F296FDFD20019E12E /* CallendarMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F692E296FDFD20019E12E /* CallendarMoveButton.swift */; };
+		ED5F692F296FDFD20019E12E /* CalendarMoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F692E296FDFD20019E12E /* CalendarMoveButton.swift */; };
+		ED5F6931296FEEE80019E12E /* MonthLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F6930296FEEE80019E12E /* MonthLabel.swift */; };
+		ED5F6934296FF1360019E12E /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F6933296FF1360019E12E /* Date.swift */; };
+		ED5F6937296FF1F90019E12E /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F6936296FF1F90019E12E /* CalendarModel.swift */; };
+		ED5F6939296FF3570019E12E /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F6938296FF3570019E12E /* DateModel.swift */; };
+		ED5F693B29729B580019E12E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5F693A29729B580019E12E /* StringExtensions.swift */; };
 		ED64111D296D6353003183EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64111C296D6353003183EC /* AppDelegate.swift */; };
 		ED64111F296D6353003183EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64111E296D6353003183EC /* SceneDelegate.swift */; };
 		ED641121296D6353003183EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED641120296D6353003183EC /* ViewController.swift */; };
@@ -18,7 +23,7 @@
 		ED641134296D6355003183EC /* CalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED641133296D6355003183EC /* CalendarTests.swift */; };
 		ED64113E296D6355003183EC /* CalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64113D296D6355003183EC /* CalendarUITests.swift */; };
 		ED641140296D6355003183EC /* CalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64113F296D6355003183EC /* CalendarUITestsLaunchTests.swift */; };
-		ED64114F296D6397003183EC /* CallendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64114E296D6397003183EC /* CallendarCollectionView.swift */; };
+		ED64114F296D6397003183EC /* CalendarCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED64114E296D6397003183EC /* CalendarCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +45,12 @@
 
 /* Begin PBXFileReference section */
 		ED5F692B296FD8340019E12E /* CallendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarCollectionViewCell.swift; sourceTree = "<group>"; };
-		ED5F692E296FDFD20019E12E /* CallendarMoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarMoveButton.swift; sourceTree = "<group>"; };
+		ED5F692E296FDFD20019E12E /* CalendarMoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarMoveButton.swift; sourceTree = "<group>"; };
+		ED5F6930296FEEE80019E12E /* MonthLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthLabel.swift; sourceTree = "<group>"; };
+		ED5F6933296FF1360019E12E /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		ED5F6936296FF1F90019E12E /* CalendarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		ED5F6938296FF3570019E12E /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
+		ED5F693A29729B580019E12E /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		ED641119296D6353003183EC /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED64111C296D6353003183EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED64111E296D6353003183EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +64,7 @@
 		ED641139296D6355003183EC /* CalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED64113D296D6355003183EC /* CalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUITests.swift; sourceTree = "<group>"; };
 		ED64113F296D6355003183EC /* CalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		ED64114E296D6397003183EC /* CallendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallendarCollectionView.swift; sourceTree = "<group>"; };
+		ED64114E296D6397003183EC /* CalendarCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,24 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		ED5F6932296FF1120019E12E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F6933296FF1360019E12E /* Date.swift */,
+				ED5F693A29729B580019E12E /* StringExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ED5F6935296FF1E70019E12E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED5F6936296FF1F90019E12E /* CalendarModel.swift */,
+				ED5F6938296FF3570019E12E /* DateModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		ED641110296D6353003183EC = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +141,8 @@
 		ED64111B296D6353003183EC /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				ED5F6935296FF1E70019E12E /* Models */,
+				ED5F6932296FF1120019E12E /* Extensions */,
 				ED64111C296D6353003183EC /* AppDelegate.swift */,
 				ED64111E296D6353003183EC /* SceneDelegate.swift */,
 				ED64114D296D6383003183EC /* View */,
@@ -154,8 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				ED5F6928296FD7E20019E12E /* Cell */,
-				ED64114E296D6397003183EC /* CallendarCollectionView.swift */,
-				ED5F692E296FDFD20019E12E /* CallendarMoveButton.swift */,
+				ED64114E296D6397003183EC /* CalendarCollectionView.swift */,
+				ED5F692E296FDFD20019E12E /* CalendarMoveButton.swift */,
+				ED5F6930296FEEE80019E12E /* MonthLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,8 +323,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED641121296D6353003183EC /* ViewController.swift in Sources */,
-				ED5F692F296FDFD20019E12E /* CallendarMoveButton.swift in Sources */,
-				ED64114F296D6397003183EC /* CallendarCollectionView.swift in Sources */,
+				ED5F692F296FDFD20019E12E /* CalendarMoveButton.swift in Sources */,
+				ED64114F296D6397003183EC /* CalendarCollectionView.swift in Sources */,
+				ED5F6934296FF1360019E12E /* Date.swift in Sources */,
+				ED5F6931296FEEE80019E12E /* MonthLabel.swift in Sources */,
+				ED5F6939296FF3570019E12E /* DateModel.swift in Sources */,
+				ED5F693B29729B580019E12E /* StringExtensions.swift in Sources */,
+				ED5F6937296FF1F90019E12E /* CalendarModel.swift in Sources */,
 				ED64111D296D6353003183EC /* AppDelegate.swift in Sources */,
 				ED5F692C296FD8340019E12E /* CallendarCollectionViewCell.swift in Sources */,
 				ED64111F296D6353003183EC /* SceneDelegate.swift in Sources */,
